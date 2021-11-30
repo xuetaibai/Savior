@@ -6,8 +6,9 @@ ENV TZ=Asia/Shanghai
 # install system requirement
 #RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
 #RUN sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list
-RUN sed -i s/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g /etc/apt/sources.list \
-    && sed -i s/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g /etc/apt/sources.list \
+#RUN sed -i s/security.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g /etc/apt/sources.list
+RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list \
+    && sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list \
     && apt-get update \
     && apt-get install -y python3 python3-dev python3-pip nginx libmysqlclient-dev pandoc supervisor 
 
